@@ -592,7 +592,7 @@ button:active {
     align-items: center;
     margin-bottom: 1rem;
     font-weight: 700;
-    color: #047857;
+    color: #000000 !important;
     font-size: 1.1rem;
 }
 
@@ -619,13 +619,13 @@ button:active {
 }
 
 .chat-message {
-    background: linear-gradient(135deg, #1B2B99 0%, #B676B1 100%);
-    color: white;
+    background: #ffffff;
+    color: #111827 !important;
     border-radius: 14px;
     padding: 1.2rem;
     line-height: 1.7;
     margin-bottom: 1.2rem;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid #e5e7eb;
     font-size: 0.95rem;
 }
 
@@ -640,7 +640,7 @@ button:active {
     border: none;
     border-radius: 10px;
     background: linear-gradient(135deg, #1B2B99 0%, #B676B1 100%) !important;
-    color: white !important;
+    color: #111827 !important;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
@@ -655,7 +655,7 @@ button:active {
 
 .chat-btn.secondary {
     background-color: white !important;
-    color: #000 !important;
+    color: #111827 !important;
     border: 2px solid #e6e6e6 !important;
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15) !important;
 }
