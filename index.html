@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-banner">
+        <p class="welcome-line welcome-line-1">Welcome to</p>
+        <p class="welcome-line welcome-line-2">Habit Tracker</p>
+        <p class="welcome-quote">“Small habits make a big difference every day.”</p>
+    </div>
+
+    <aside id="chatbox">
+        <div class="chat-header">
+            <span>Habit Helper</span>
+            <button id="close-chat" class="close-btn">×</button>
+        </div>
+        <div class="chat-message">
+            These are some of my habits: Drink water, exercise, read for 20 minutes. Would you like to continue with these basic ones?
+        </div>
+        <div class="chat-actions">
+            <button class="chat-btn" id="yes-btn">Yes, keep them</button>
+            <button class="chat-btn secondary" id="customize-btn">Customize</button>
+        </div>
+    </aside>
+
+    <main>
+        <div id="main-grid">
+            <section id="habit-panel">
+                <section id="habit-list">
+                    <h2>Your Habits</h2>
+                    <ul id="habits">
+                        <!-- Habits will be added here -->
+                    </ul>
+                </section>
+
+                <section id="add-habit">
+                    <h2>Add a New Habit</h2>
+                    <form id="habit-form">
+                        <div class="form-group">
+                            <label for="new-habit">Habit Name:</label>
+                            <input type="text" id="new-habit" placeholder="e.g., Morning Yoga" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="habit-time">Reminder Time:</label>
+                            <input type="time" id="habit-time">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="habit-frequency">Repeat Frequency:</label>
+                            <select id="habit-frequency">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="hourly">Hourly</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="custom-frequency-group" style="display: none;">
+                            <label for="habit-custom-days">Every (days/hours):</label>
+                            <input type="number" id="habit-custom-days" min="1" placeholder="Enter number">
+                            <select id="habit-custom-unit">
+                                <option value="hour">Hour(s)</option>
+                                <option value="day">Day(s)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="habit-category">Category:</label>
+                            <div class="category-input-group">
+                                <select id="habit-category">
+                                    <option value="">Select or create category...</option>
+                                </select>
+                                <button type="button" id="add-category-btn" class="add-category-btn">+</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Add Habit</button>
+                    </form>
+                </section>
+
+                <section id="categories-section" style="display: none;">
+                    <h2>Manage Categories</h2>
+                    <div id="categories-list"></div>
+                </section>
+            </section>
+
+            <aside id="instructions">
+                <h2>Instructions</h2>
+                <p>Add your new daily habits and check them off when complete.</p>
+                <p class="instruction-example"><strong>Example:</strong> Drink water, exercise, read a chapter.</p>
+                <div class="instruction-card">
+                    <h3>How to start</h3>
+                    <ol>
+                        <li>Type a habit in the box.</li>
+                        <li>Click Add Habit.</li>
+                        <li>Mark it complete when done.</li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>✨ Habit Tracker App - Build better habits, one day at a time</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
