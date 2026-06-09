@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Free Habit Tracker App — Build Daily Habits & Track Streaks</title>
+        <title>Habit Flow</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="welcome-banner">
-            <p class="welcome-line welcome-line-1">Free Habit Tracker App</p>
+            <p class="welcome-line welcome-line-1">Habit Flow</p>
             <p class="welcome-line welcome-line-2">Build Daily Habits & Track Streaks</p>
             <p class="welcome-quote">“Small habits make a big difference every day.”</p>
             <p class="hero-subtitle">A modern habit tracker that helps you stay consistent, celebrate progress, and keep your streak alive.</p>
-            <div class="hero-actions">
-                <button class="primary">Start Building</button>
-                <a href="#add-habit" class="secondary">Add your first habit</a>
-            </div>
+                <div class="hero-actions">
+                    <a href="#add-habit" class="secondary hero-primary">Add your first habit</a>
+                </div>
+            
         <div class="chat-header">
             <span>Habit Helper</span>
             <button id="close-chat" class="close-btn">×</button>
@@ -32,19 +32,27 @@
     <main>
         <div id="main-grid">
             <section id="habit-panel">
-                <section id="habit-list">
-                    <h2>Your Habits</h2>
-                    <ul id="habits">
-                        <!-- Habits will be added here -->
-                    </ul>
-                </section>
+            
+                    <section id="instructions">
+                        <h2>Habit Flow</h2>
+                        <p>Add your new daily habits and check them off when complete.</p>
+                        <p class="instruction-example"><strong>Example:</strong> Drink water, exercise, read a chapter.</p>
+                    </section>
 
-                <section id="add-habit">
+                    <section id="habit-list">
+                        <h2>Your Habits</h2>
+                        <ul id="habits">
+                            <!-- Habits will be added here -->
+                        </ul>
+                    </section>
+
+                    <section id="add-habit">
                     <h2>Add a New Habit</h2>
                     <form id="habit-form">
                         <div class="form-group">
                             <label for="new-habit">Habit Name:</label>
-                            <input type="text" id="new-habit" placeholder="e.g., Morning Yoga" required>
+                            <input type="text" id="new-habit" placeholder="e.g., Morning Yoga" autocomplete="off" required>
+                            <div id="suggestions" class="suggestions-dropdown" aria-live="polite"></div>
                         </div>
 
                         <div class="form-group">
@@ -92,20 +100,37 @@
             </section>
 
             <aside id="instructions">
-                <h2>Instructions</h2>
+                <h2>Habit Flow</h2>
                 <p>Add your new daily habits and check them off when complete.</p>
                 <p class="instruction-example"><strong>Example:</strong> Drink water, exercise, read a chapter.</p>
-                <div class="instruction-card">
-                    <h3>How to start</h3>
-                    <ol>
-                        <li>Type a habit in the box.</li>
-                        <li>Click Add Habit.</li>
-                        <li>Mark it complete when done.</li>
-                    </ol>
-                </div>
             </aside>
         </div>
     </main>
+
+    <section id="achievements" class="achievements-section">
+        <div class="achievements-top">
+            <div class="achievements-copy">
+                <p class="section-tag">Achievement Badges</p>
+                <h2 class="section-title">Earn badges for milestones</h2>
+                <p>Collect badges by completing tasks and hitting streaks.</p>
+            </div>
+        </div>
+
+        <div class="badge-grid" id="badge-grid"></div>
+
+        <div class="badge-tasks">
+            <h3>Tasks to earn badges</h3>
+            <ul>
+                <li><strong>7-Day Streak:</strong> Mark at least one habit complete every day for 7 consecutive days.</li>
+                <li><strong>30-Day Streak:</strong> Maintain any habit for 30 consecutive days.</li>
+                <li><strong>100-Day Streak:</strong> Maintain long-term consistency for 100 days.</li>
+                <li><strong>Perfect Week:</strong> Complete at least one habit each day for 7 days.</li>
+                <li><strong>Early Bird:</strong> Complete a habit before 8 AM at least once.</li>
+                <li><strong>Night Owl:</strong> Complete a habit after 10 PM at least once.</li>
+                <li><strong>10/50/100 Completions:</strong> Reach the total number of task completions across all habits.</li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
         <p>✨ Habit Tracker App - Build better habits, one day at a time</p>
