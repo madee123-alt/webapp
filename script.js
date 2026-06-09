@@ -22,6 +22,24 @@ const joinGroupBtn = document.getElementById('join-group-btn');
 const calendarGrid = document.getElementById('calendar-grid');
 const encouragementBanner = document.getElementById('encouragement-banner');
 
+function focusField(targetId) {
+    const field = document.getElementById(targetId);
+    if (!field) return;
+    field.focus();
+    if (typeof field.select === 'function' && field.tagName !== 'SELECT') {
+        field.select();
+    }
+}
+
+document.querySelectorAll('.form-group label').forEach((label) => {
+    label.addEventListener('click', (event) => {
+        const targetId = label.getAttribute('for');
+        if (!targetId) return;
+        event.preventDefault();
+        focusField(targetId);
+    });
+});
+
 // Default categories with emojis
 const defaultCategories = [
     { name: 'Health', emoji: '💚' },
