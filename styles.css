@@ -211,12 +211,12 @@ main {
 
 #instructions p {
     margin: 0 0 1.4rem;
-    color: rgba(255, 255, 255, 0.92);
+    color: #111827;
     line-height: 1.8;
 }
 
 .instruction-example {
-    color: rgba(255, 255, 255, 0.8);
+    color: #111827;
     margin-bottom: 1.8rem;
     line-height: 1.75;
 }
@@ -409,7 +409,7 @@ li input[type="checkbox"]:checked ~ span {
 .form-group { position: relative; }
 
 label {
-    color: #047857;
+    color: #111827;
     font-weight: 600;
     font-size: 0.95rem;
 }
@@ -424,6 +424,8 @@ label {
     border: 2px solid #e5e7eb;
     border-radius: 10px;
     font-size: 0.95rem;
+    color: #111827;
+    background-color: #ffffff;
     transition: all 0.3s ease;
     font-family: inherit;
 }
@@ -436,7 +438,8 @@ label {
     outline: none;
     border-color: #10b981;
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-    background: linear-gradient(135deg, #1B2B99 0%, #B676B1 100%);
+    background-color: #ffffff;
+    color: #111827;
 }
 
 #habit-custom-days {
@@ -459,6 +462,8 @@ label {
     border: 2px solid #e5e7eb;
     border-radius: 10px;
     font-size: 0.95rem;
+    color: #111827;
+    background-color: #ffffff;
     transition: all 0.3s ease;
     font-family: inherit;
 }
@@ -467,14 +472,15 @@ label {
     outline: none;
     border-color: #10b981;
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-    background: linear-gradient(135deg, #1B2B99 0%, #B676B1 100%);
+    background-color: #ffffff;
+    color: #111827;
 }
 
 .add-category-btn {
     padding: 0.85rem 1.2rem !important;
-    border: 2px solid #10b981 !important;
-    background: linear-gradient(135deg, #1B2B99 0%, #B676B1 100%) !important;
-    color: #047857 !important;
+    border: 2px solid #d1d5db !important;
+    background: #ffffff !important;
+    color: #111827 !important;
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
@@ -492,7 +498,7 @@ label {
 .submit-btn {
     padding: 1rem 1.5rem !important;
     background: linear-gradient(135deg, #1B2B99 0%, #B676B1 100%) !important;
-    color: white !important;
+    color: #111827 !important;
     border-radius: 10px;
     font-weight: 600;
     font-size: 1rem;
